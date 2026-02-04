@@ -1,162 +1,230 @@
 ---
-import '../styles/estilos.css';
+import "../styles/estilos.css";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GRUPOAQUA | Ingeniería en el manejo del agua | Colombia</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="img/GrupoAqua_Logo.avif" alt="GRUPOAQUA Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Inicio</a></li>
-                    <li><a href="#">Aguas</a></li>
-                    <li><a href="#">Acuicultura</a></li>
-                    <li><a href="#">Filtros</a></li>
-                    <li><a href="#">Soporte</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                </ul>
-            </nav>
+      <div class="header-container">
+        <div class="logo">
+          <img src="img/GrupoAqua_Logo.avif" alt="GRUPOAQUA Logo" />
         </div>
+        <nav>
+          <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Aguas</a>
+              <div class="dropdown-content">
+                <a href="#">Tratamientos de Agua</a>
+                <a href="#">Consultoría</a>
+                <a href="#">Almacenamiento y Bombeo</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Acuicultura</a>
+              <div class="dropdown-content">
+                <a href="#">Circuladores</a>
+                <a href="#">Aireadores</a>
+              </div>
+            </li>
+            <li><a href="#">Filtros</a></li>
+            <li><a href="#">Soporte</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Proyectos</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <section class="hero">
-        <div class="bubbles">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-logo">
+          <img src="img/GrupoAqua_Logo.avif" alt="GRUPOAQUA Logo" />
         </div>
-        
-        <div class="hero-content">
-            <div class="hero-logo">
-                <img src="img/GrupoAqua_Logo.avif" alt="GRUPOAQUA Logo">
-            </div>
-            
-            <h2>Ingeniería y Sistemas para el Manejo del AGUA</h2>
-            
-            <div class="hero-description">
-                <p>
-                    Somos una empresa dedicada a brindar soluciones integrales en el manejo eficiente del agua, desde la etapa de 
-                    diagnóstico y asesoría, diseño de soluciones a la medida y servicios complementario de mantenimiento y seguimiento. 
-                    GRUPOAQUA busca generar un uso eficiente del agua y disminuir el impacto ambiental producido por las diferentes 
-                    actividades del hombre, mediante el desarrollo de sistemas de tratamiento de aguas y la implementación de equipos en 
-                    acuicultura.
-                </p>
-            </div>
-            
-            <a href="#" class="cta-button">Ver más</a>
+
+        <h2>Ingeniería y Sistemas para el Manejo del AGUA</h2>
+
+        <div class="hero-description">
+          <p>
+            Somos una empresa dedicada a brindar soluciones integrales en el
+            manejo eficiente del agua, desde la etapa de diagnóstico y asesoría,
+            diseño de soluciones a la medida y servicios complementario de
+            mantenimiento y seguimiento. GRUPOAQUA busca generar un uso
+            eficiente del agua y disminuir el impacto ambiental producido por
+            las diferentes actividades del hombre, mediante el desarrollo de
+            sistemas de tratamiento de aguas y la implementación de equipos en
+            acuicultura.
+          </p>
         </div>
+
+        <a href="#" class="cta-button">Ver más</a>
+      </div>
     </section>
+    <!-- CARRUSEL -->
     <section class="specialists">
-        <div class="specialists-container">
-            <div class="specialists-text">
-                <h2>Somos <br> Especialistas en:</h2>
-                <ul>
-                    <li>Sistemas de Tratamiento de Aguas Domésticas e Industriales.</li>
-                    <li>Sistemas de Potabilización de Agua.</li>
-                    <li>Aprovechamiento de Aguas Lluvias y Aguas Grises.</li>
-                    <li>Re - uso del agua.</li>
-                    <li>Sistemas de Aireación para el Sector de la Acuicultura.</li>
-                    <li>Servicios y Consultorías Ambientales.</li>
-                </ul>
-            </div>
-            <div class="specialists-carousel">
-                <div class="carousel-container">
-                    <div class="carousel-slide active">
-                        <!-- Imagen 1 -->
-                        <img src="img/carrusel.1.avif" alt="Imagen 1">
-                        <div class="carousel-caption">
-                        Planta de Tratamiento Industrial
-                        <!-- <span>PTARD - Uso Doméstico</span> -->
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <!-- Imagen 2 -->
-                        <img src="img/carrusel.2.avif" alt="Imagen 2">
-                        <div class="carousel-caption">
-                            Plantas de Tratamiento de Aguas
-                            <span>PTARD - Uso Doméstico</span>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <!-- Imagen 3 -->
-                        <img src="img/carrusel.3.avif" alt="Imagen 3">
-                        <div class="carousel-caption">
-                            Acuicultura
-                            <span>Aireador Sprint</span>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 4">
-                        <div class="carousel-caption">Descripción de la Imagen 4</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 5">
-                        <div class="carousel-caption">Descripción de la Imagen 5</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 6">
-                        <div class="carousel-caption">Descripción de la Imagen 6</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 7">
-                        <div class="carousel-caption">Descripción de la Imagen 7</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 8">
-                        <div class="carousel-caption">Descripción de la Imagen 8</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 9">
-                        <div class="carousel-caption">Descripción de la Imagen 9</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 10">
-                        <div class="carousel-caption">Descripción de la Imagen 10</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 11">
-                        <div class="carousel-caption">Descripción de la Imagen 11</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 12">
-                        <div class="carousel-caption">Descripción de la Imagen 12</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 13">
-                        <div class="carousel-caption">Descripción de la Imagen 13</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 14">
-                        <div class="carousel-caption">Descripción de la Imagen 14</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/GrupoAqua_Logo.avif" alt="Imagen 15">
-                        <div class="carousel-caption">Descripción de la Imagen 15</div>
-                    </div>
-                    <button class="carousel-btn prev">&#10094;</button>
-                    <button class="carousel-btn next">&#10095;</button>
-                    <div class="slide-counter"></div>
-                </div>
-            </div>
+      <div class="specialists-container">
+        <div class="specialists-text">
+          <h2>Somos <br /> Especialistas en:</h2>
+          <ul>
+            <li>Sistemas de Tratamiento de Aguas Domésticas e Industriales.</li>
+            <li>Sistemas de Potabilización de Agua.</li>
+            <li>Aprovechamiento de Aguas Lluvias y Aguas Grises.</li>
+            <li>Re - uso del agua.</li>
+            <li>Sistemas de Aireación para el Sector de la Acuicultura.</li>
+            <li>Servicios y Consultorías Ambientales.</li>
+          </ul>
         </div>
+        <div class="specialists-carousel">
+          <div class="carousel-container">
+            <div class="carousel-slide active">
+              <!-- Imagen 1 -->
+              <img src="img/carrusel.1.avif" alt="Imagen 1" />
+              <div class="carousel-caption">
+                Planta de Tratamiento Industrial
+                <!-- <span>PTARD - Uso Doméstico</span> -->
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <!-- Imagen 2 -->
+              <img src="img/carrusel.2.avif" alt="Imagen 2" />
+              <div class="carousel-caption">
+                Plantas de Tratamiento de Aguas
+                <span>PTARD - Uso Doméstico</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <!-- Imagen 3 -->
+              <img src="img/carrusel.3.avif" alt="Imagen 3" />
+              <div class="carousel-caption">
+                Acuicultura
+                <span>Aireador Sprint</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.4.avif" alt="Imagen 4" />
+              <!-- Imagen 4 -->
+              <div class="carousel-caption">Tratamiento de Agua</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.5.avif" alt="Imagen 5" />
+              <!-- Imagen 5 -->
+              <div class="carousel-caption">
+                Acuicultura
+                <span>Aireador Eco</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.6.avif" alt="Imagen 6" />
+              <!-- Imagen 6 -->
+              <div class="carousel-caption">
+                Plantas de Tratamiento de Aguas
+                <span>PTARD - Uso Doméstico</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.7.avif" alt="Imagen 7" />
+              <!-- Imagen 7 -->
+              <div class="carousel-caption">
+                Acuicultura
+                <span>Sistema de Aireación - Splash</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.8.avif" alt="Imagen 8" />
+              <!-- Imagen 8 -->
+              <div class="carousel-caption">Circulador Rio</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.9.avif" alt="Imagen 9" />
+              <!-- Imagen 9 -->
+              <div class="carousel-caption">
+                Plantas de Tratamiento de Aguas
+                <span>PTARD - Uso Doméstico</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.10.avif" alt="Imagen 10" />
+              <!-- Imagen 10 -->
+              <div class="carousel-caption">
+                Aireación en cultivos extensivos
+                <span>Cultivo de camarones</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <!-- Imagen 11 -->
+              <img src="img/carrusel.11.avif" alt="Imagen 11" />
+              <div class="carousel-caption">Planta de Tratamiento Industrial</div>
+            </div>
+            <div class="carousel-slide">
+              <!-- Imagen 12 -->
+              <img src="img/carrusel.12.avif" alt="Imagen 12" />
+              <div class="carousel-caption">
+                Acuicultura
+                <span>Sprint - Aireador de agua</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.13.avif" alt="Imagen 13" />
+              <!-- Imagen 13 -->
+              <div class="carousel-caption">
+                Plantas de Tratamiento de Aguas
+                <span>PTARD - Uso Doméstico</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.14.avif" alt="Imagen 14" />
+              <!-- Imagen 14 -->
+              <div class="carousel-caption">
+                Plantas de Tratamiento de Aguas
+                <span>PTARD - Uso Doméstico</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="img/carrusel.15.avif" alt="Imagen 15" />
+              <!-- Imagen 15 -->
+              <div class="carousel-caption">
+                Sistema de Circulación del Agua
+                <span>Brio</span>
+              </div>
+            </div>
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+            <div class="slide-counter"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <button class="lightbox-btn prev">&#10094;</button>
+      <img class="lightbox-content" id="lightbox-img" />
+      <div id="lightbox-caption"></div>
+      <button class="lightbox-btn next">&#10095;</button>
+    </div>
+
+    
+
     <script>
-        import "../scripts/script.js";
+      import "../scripts/script.js";
     </script>
-</body>
+  </body>
 </html>

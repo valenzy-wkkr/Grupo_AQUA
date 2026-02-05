@@ -661,3 +661,378 @@ nav a:hover::after {
     width: 100%;
   }
 }
+
+/* NUESTROS SERVICIOS */
+/* Services Section - Clean & Balanced */
+.services {
+  padding: 6rem 0;
+  background-color: #f2f2f2; /* Soft gray background */
+  text-align: center; /* Center align text */
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.services h2 {
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.services h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.service-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  flex: 1 1 280px;
+  max-width: 350px;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 600px) {
+  .services-grid {
+    padding: 0 1rem;
+  }
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.08) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(52, 152, 219, 0.2);
+  border-color: #3498db;
+}
+
+.service-card .icon {
+  width: 80px;
+  height: 80px;
+  background: #eaf6fc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  color: #3498db;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add a pulse effect behind the icon on hover */
+.service-card .icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #3498db;
+  z-index: -1;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service-card .icon i {
+  font-size: 2.5rem;
+  transition: all 0.4s ease;
+}
+
+/* Hover Effects - Balanced */
+.service-card:hover .icon {
+  transform: scale(1.1);
+  color: white;
+}
+
+.service-card:hover .icon::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #34495e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card:hover h3 {
+  color: #3498db; /* Text turns blue */
+}
+
+/* Clients Section - Modern & Clean */
+.clients{
+  padding: 9rem 0;
+  /* background-color: #f5f7fa; */
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.clients-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.clients h2 {
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 4.5rem; /* Slightly more spacing below title */
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.clients h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem; /* Slightly reduced space for denser layout */
+  align-items: center;
+}
+
+.client-card {
+  /* Removed card styling for a cleaner look */
+  background: white; /* White box to frame logos uniformly */
+  padding: 0.75rem; /* Slightly reduced to give logos more area */
+  width: 260px; /* Larger card */
+  height: 150px; /* Slightly taller card for more image height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Very subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.client-card img {
+  max-width: 98%; /* Logos occupy nearly the entire card */
+  max-height: 99%; /* Slightly taller within the card */
+  object-fit: contain;
+  /* Removed grayscale filter */
+  opacity: 1; 
+  transition: transform 0.3s ease;
+}
+
+.client-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Footer Section */
+/* Footer Section - Pro & Elegant */
+footer{
+  position: relative;
+  background: linear-gradient(135deg, #102a43 0%, #243b55 100%);
+  color: white;
+  padding: 5rem 0 2rem;
+  overflow: hidden;
+}
+
+.footer-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(52, 152, 219, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(93, 173, 226, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.footer-contact {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-contact h3{
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #fff;
+  border-left: 4px solid #3498db;
+  padding-left: 1rem;
+}
+
+.contact-item{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.contact-item i{
+  color: #3498db;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  width: 20px;
+  text-align: center;
+}
+
+.contact-item p{
+  color: #d9e2ec;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.footer-logo-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 300px;
+}
+
+.footer-logo{
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+}
+
+.footer-logo img{
+  max-width: 280px;
+  height: auto;
+  display: block;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  color: #829ab1;
+  font-size: 0.95rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+    
+    .footer-logo-section {
+      align-items: flex-start;
+      width: 100%;
+    }
+    
+    .footer-logo {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .footer-logo img {
+      margin: 0 auto;
+    }
+    
+    .clients-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-grid {
+      grid-template-columns: 1fr;
+    }
+}
+

@@ -1051,3 +1051,909 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* Section Nosotros */
+
+/* Nosotros  Galeria Section */
+.nosotros-galeria {
+  /* padding: 6rem 2rem; */
+  padding: 10rem 2rem;
+  /* background-color: #f9f9f9; */
+  background-color: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-nosotros h1 {
+  color: #1e3c72;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.header-nosotros h1::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.galeria-grid {
+  display: grid;
+  /* 6 Columns for the specific layout */
+  grid-template-columns: repeat(6, 1fr);
+  /* Use explicit heights for the top section if needed, or auto-rows */
+  grid-auto-rows: 200px;
+  gap: 15px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #eee; /* Subtle border */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Layout Definition (Bento Box) --- */
+
+/* 1. Top Left: Logo (Small) */
+.item-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-1 img {
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* 2. Top Left: Splash (Small) */
+.item-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* 3. Bottom Left: Wide Pools (Spans 2 cols) */
+.item-3 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+/* 4. Center: 5 MICRAS (Large 2x2) */
+.item-4 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-4 img {
+  object-fit: contain;
+  padding: 20px;
+}
+
+/* 5. Right: White Tanks (Tall 1x2) */
+.item-5 {
+  grid-column: 5 / 6;
+  grid-row: 1 / 3;
+}
+
+/* 6. Far Right Top: Tunnel (1x1) */
+.item-6 {
+  grid-column: 6 / 7;
+  grid-row: 1 / 2;
+}
+
+/* 7. Far Right Bottom: Vertical Tank (1x1) */
+.item-7 {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+
+/* Bottom Row Items */
+.item-8,
+.item-9,
+.item-10,
+.item-11,
+.item-12,
+.item-13 {
+  grid-row: auto;
+  grid-column: span 1; /* Default to 1 col for bottom items */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .galeria-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Readjust layout for tablet */
+  .item-4 {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2; /* Shrink center logo */
+  }
+  .item-5 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .item-3 {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+  }
+
+  /* Simplify for mobile */
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4,
+  .item-5,
+  .item-6,
+  .item-7 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .item-3,
+  .item-4 {
+    grid-column: span 2; /* Keep big items wide on mobile */
+  }
+}
+
+
+/* ===============================
+   Nuestra Historia - Modern
+================================ */
+
+.historia{
+  padding: 8rem 2rem;
+  background: #29508f;
+  position: relative;
+  overflow: hidden;
+}
+
+.historia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: none;
+}
+
+.historia-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.historia-title{
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #fff;
+}
+
+.historia-title h2{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+}
+
+.historia-title h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 6px;
+  background: #37a1e4;
+  border-radius: 4px;
+  margin: 0.6rem auto 0;
+}
+
+.historia-title span {
+  display: block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 1.1rem;
+}
+
+.historia-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.historia-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.historia-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+.historia-year {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.historia-card p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.95);
+}
+
+/* ===============================
+   Nuestras Alianzas - Modern
+================================ */
+
+.alianzas {
+  padding: 8rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.alianzas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(52, 152, 219, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(93, 173, 226, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.alianzas-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.alianzas-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.alianzas-text h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.alianzas-text h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #5dade2);
+  border-radius: 2px;
+}
+
+.alianzas-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-top: 2rem;
+  max-width: 500px;
+}
+
+.alianzas-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.world-map {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.world-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  opacity: 0.9;
+}
+
+.map-marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #e74c3c;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+  animation: pulse-marker 2s infinite;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.map-marker:hover {
+  transform: scale(1.3);
+}
+
+.marker-1 {
+  top: 54%;
+  left: 32%;
+  animation-delay: 0s;
+  /* background-color: #000; */
+}
+
+.marker-2 {
+  top: 36%;
+  left: 46%;
+  animation-delay: 0.5s;
+  /* background-color: white; */
+}
+
+.marker-3 {
+  top: 35%;
+  left: 52%;
+  animation-delay: 1s;
+}
+
+@keyframes pulse-marker {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4), 0 0 0 0 rgba(231, 76, 60, 0.7);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4), 0 0 0 15px rgba(231, 76, 60, 0);
+  }
+}
+
+.alianzas-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.logo-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(93, 173, 226, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.logo-item:hover::before {
+  opacity: 1;
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.logo-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive Alianzas */
+@media (max-width: 1024px) {
+  .alianzas-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .alianzas-text {
+    text-align: center;
+  }
+
+  .alianzas-text h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .alianzas-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .alianzas-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .alianzas {
+    padding: 5rem 1.5rem;
+  }
+
+  .alianzas-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .alianzas-text p {
+    font-size: 1rem;
+  }
+
+  .alianzas-logos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .world-map {
+    padding: 1rem;
+  }
+
+  .map-marker {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ===============================
+   Nuestros Servicios - Modern Cards
+================================ */
+
+.servicios {
+  padding: 8rem 2rem;
+  background: #fafafa;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.servicios::before {
+  display: none;
+}
+
+.servicios-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.servicios-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.servicios-header h2{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.servicios-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #5dade2);
+  border-radius: 2px;
+}
+
+.servicios-header p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-top: 1.5rem;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.servicio-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  background: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.servicio-card::before {
+  display: none;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+}
+
+.servicio-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.servicio-card:hover .servicio-image img {
+  transform: scale(1.1);
+}
+
+.servicio-content {
+  padding: 1.5rem;
+  z-index: 2;
+  transition: transform 0.4s ease;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: center;
+  border-top: 1px solid #dee2e6;
+}
+
+.servicio-content h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.servicio-card:hover .servicio-content {
+  transform: none;
+}
+
+/* Responsive Servicios */
+@media (max-width: 1200px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .servicios {
+    padding: 5rem 1.5rem;
+  }
+
+  .servicios-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .servicios-header p {
+    font-size: 1.1rem;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .servicio-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicios-header h2 {
+    font-size: 2rem;
+  }
+
+  .servicios-header p {
+    font-size: 1rem;
+  }
+
+  .servicio-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===============================
+   Sección Tratamientos de Agua
+================================ */
+
+.tratamientos {
+  padding: 8rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f7f9 100%);
+}
+
+.tratamientos-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tratamientos-header{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.tratamientos-header h1 {
+  color: #1e3c72;
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.tratamientos-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.tratamientos-header p{
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  color: #4a5568;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Grid de Tarjetas */
+.tratamientos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.t-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  cursor: pointer;
+}
+
+.t-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #5dade2);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.t-card:hover::before {
+  transform: scaleX(1);
+}
+
+.t-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(52, 152, 219, 0.2);
+  border-color: rgba(52, 152, 219, 0.2);
+}
+
+.t-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.t-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(52, 152, 219, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.t-card:hover .t-image::after {
+  opacity: 1;
+}
+
+.t-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.t-card:hover .t-image img {
+  transform: scale(1.08);
+}
+
+.t-content {
+  padding: 2.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
+}
+
+/* El toque azul lateral mejorado */
+.t-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 4px;
+  background: linear-gradient(to bottom, #3498db, #5dade2);
+  border-radius: 0 4px 4px 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.t-card:hover .t-content::before {
+  opacity: 0.8;
+}
+
+.t-content h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.t-card:hover .t-content h3 {
+  color: #3498db;
+}
+
+.t-content p {
+  color: #607d8b;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.t-card:hover .t-content p {
+  color: #546e7a;
+}
+
+/* Botón Ver más que aparece en hover */
+.btn-ver-mas {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #3498db, #5dade2);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: fit-content;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translateY(10px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-ver-mas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.t-card:hover .btn-ver-mas {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-ver-mas:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.btn-ver-mas:hover::before {
+  left: 100%;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .tratamientos-grid {
+    grid-template-columns: 1fr;
+  }
+  .tratamientos-header h1 {
+    font-size: 2.2rem;
+  }
+}

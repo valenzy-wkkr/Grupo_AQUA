@@ -1,0 +1,437 @@
+---
+import "../styles/style.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros | grupoaqua</title>
+    <link rel="icon" type="image/avif" href="/Grupo_AQUA/img/Fabicon.avif" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="img/GrupoAqua_Logo.avif" alt="GRUPOAQUA Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/Grupo_AQUA/" class="active">Inicio</a></li>
+            <li class="dropdown">
+              <a href="#">Aguas</a>
+              <ul class="dropdown-content">
+                <li><a href="/Grupo_AQUA/tratDeAguas">Tratamientos de Agua</a></li>
+                <li><a href="#">Consultoría</a></li>
+                <li><a href="#">Almacenamiento y Bombeo</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="/acu">Acuicultura</a>
+              <ul class="dropdown-content">
+                <li><a href="#">Circuladores</a></li>
+                <li><a href="#">Aireadores</a></li>
+              </ul>
+            </li>
+            <li><a href="https://5micras.com/">Filtros</a></li>
+            <li><a href="/stp">Soporte</a></li>
+            <li><a href="/Grupo_AQUA/nosotros">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Proyectos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section Galeria -->
+
+    <section class="nosotros-galeria">
+      <div class="header-nosotros">
+        <h1>Sobre Nosotros</h1>
+      </div>
+
+      <div class="galeria-grid">
+        <!-- 1. Top Left: Logo (Small) -->
+        <div class="grid-item item-1">
+          <img src="galeria/Fabicon.avif" alt="Fabicon.png" />
+        </div>
+
+        <!-- 2. Top Left: Splash (Small) -->
+        <div class="grid-item item-2">
+          <img src="galeria/Splash.avif" alt="Splash" />
+        </div>
+
+        <!-- 3. Bottom Left: Wide Pools -->
+        <div class="grid-item item-3">
+          <img src="galeria/Spans-wide.avif" alt="Combo - Acuicultura" />
+        </div>
+
+        <!-- 4. Center: 5 MICRAS (Large) -->
+        <div class="grid-item item-4">
+          <img
+            src="galeria/5micras.avif"
+            alt="5 Micras - Línea de filtros de agua"
+          />
+        </div>
+
+        <!-- 5. Right: White Tanks (Tall) -->
+        <div class="grid-item item-5">
+          <img
+            src="galeria/tanks-white.avif"
+            alt="Plantas de Tratamiento - Uso Doméstico"
+          />
+        </div>
+
+        <!-- 6. Far Right Top: Tunnel -->
+        <div class="grid-item item-6">
+          <img
+            src="galeria/Tunnel-down-view.avif"
+            alt="Plantas de Tratamiento de Agua - Uso Doméstico"
+          />
+        </div>
+
+        <!-- 7. Far Right Bottom: Vertical Tank -->
+        <div class="grid-item item-7">
+          <img
+            src="galeria/tanks-vertical.avif"
+            alt="Tanques de Almacenamiento de Agua"
+          />
+        </div>
+
+        <!-- Bottom Row Items -->
+        <!-- 8. Blue Machine -->
+        <div class="grid-item item-8">
+          <img
+            src="galeria/blue-water.avif"
+            alt="Eco - Equipo de aireación estático"
+          />
+        </div>
+
+        <!-- 9. Pipes -->
+        <div class="grid-item item-9">
+          <img src="galeria/pipes.avif" alt="Potabilización del Agua" />
+        </div>
+
+        <!-- 10. Boat -->
+        <div class="grid-item item-10">
+          <img src="galeria/boat-water.avif" alt="Combito 3 - Acuicultura" />
+        </div>
+
+        <!-- 11. Fountain -->
+        <div class="grid-item item-11">
+          <img src="galeria/Fountain.avif" alt="Aireador Splash" />
+        </div>
+
+        <!-- 12. Green Tunnel/Tank -->
+        <div class="grid-item item-12">
+          <img
+            src="galeria/tunnel.avif"
+            alt="Proyectos en Unidades Residenciales"
+          />
+        </div>
+
+        <!-- 13. Extra Item -->
+        <div class="grid-item item-13">
+          <img src="galeria/1.avif" alt="Rain Master - 5 micras" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Structure -->
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <button class="lightbox-btn prev" id="prevBtn">&#10094;</button>
+      <img class="lightbox-content" id="lightbox-img" />
+      <button class="lightbox-btn next" id="nextBtn">&#10095;</button>
+      <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Nuestra Historia -->
+    <section class="historia">
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+      <div class="historia-container">
+        <div class="historia-title">
+          <h2>Nuestra Historia</h2>
+          <span>Más de 17 años cuidando el recurso más valioso</span>
+        </div>
+
+        <div class="historia-timeline">
+          <div class="historia-card">
+            <span class="historia-year">2008</span>
+            <p>
+              Grupoaqua S.A.S nace con la visión de brindar soluciones técnicas
+              para la acuicultura en Colombia, incorporando tecnología italiana
+              de alto nivel a través de <strong>Acqua & Co</strong>.
+            </p>
+          </div>
+
+          <div class="historia-card">
+            <span class="historia-year">Expansión</span>
+            <p>
+              La empresa amplía su alcance hacia el manejo eficiente de recursos
+              hídricos, desarrollando soluciones innovadoras en tratamiento de
+              aguas con menor impacto ambiental.
+            </p>
+          </div>
+
+          <div class="historia-card">
+            <span class="historia-year">Hoy</span>
+            <p>
+              Con más de 17 años de experiencia, Grupoaqua ofrece consultoría,
+              diseño, instalación y mantenimiento de plantas de tratamiento,
+              además de sistemas para acuicultura y la línea doméstica
+              <strong>5 Micras</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUESTRAS ALIANZAS -->
+
+    <section class="alianzas">
+      <div class="alianzas-container">
+        <div class="alianzas-content">
+          <div class="alianzas-text">
+            <h2>Nuestras Alianzas</h2>
+            <p>
+              Tenemos alianzas con empresas del mismo sector en diferentes
+              países del mundo de cuyas marcas somos representantes en Colombia
+              y con las cuales intercambiamos productos, sistemas, servicios y
+              conocimiento.
+            </p>
+          </div>
+
+          <div class="alianzas-visual">
+            <div class="world-map">
+              <img src="img/mapa_Alianzas.avif" alt="Mapa Mundial" />
+              <div class="map-marker marker-1"></div>
+              <div class="map-marker marker-2"></div>
+              <div class="map-marker marker-3"></div>
+            </div>
+
+            <div class="alianzas-logos">
+              <div class="logo-item">
+                <img src="img/ventilAQUA.avif" alt="Ventil Aqua" />
+              </div>
+              <div class="logo-item">
+                <img src="img/innovAQUA.avif" alt="Innovaqua" />
+              </div>
+              <div class="logo-item">
+                <img src="img/acqua&co.avif" alt="Acqua & Co" />
+              </div>
+              <div class="logo-item">
+                <img src="img/atlasFiltri.avif" alt="Atlas Filtri" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUESTROS SERVICIOS -->
+    <section class="servicios">
+      <div class="servicios-container">
+        <div class="servicios-header">
+          <h2>Nuestros Servicios</h2>
+          <p>Soluciones integrales en agua y acuicultura</p>
+        </div>
+
+        <div class="servicios-grid">
+          <!-- Card 1: Proyectos -->
+          <div class="servicio-card">
+            <div class="servicio-image">
+              <img
+                src="proyectos/nuestros-proyectos.avif"
+                alt="Nuestros Proyectos"
+              />
+            </div>
+            <div class="servicio-content">
+              <h3>Nuestros Proyectos</h3>
+            </div>
+          </div>
+
+          <!-- Card 2: Manejo de Aguas -->
+          <div class="servicio-card">
+            <div class="servicio-image">
+              <img src="img/carrusel.4.avif" alt="Manejo de Aguas" />
+            </div>
+            <div class="servicio-content">
+              <h3>Manejo de Aguas</h3>
+            </div>
+          </div>
+
+          <!-- Card 3: Acuicultura -->
+          <div class="servicio-card">
+            <div class="servicio-image">
+              <img src="galeria/Splash.avif" alt="Acuicultura" />
+            </div>
+            <div class="servicio-content">
+              <h3>Acuicultura</h3>
+            </div>
+          </div>
+
+          <!-- Card 4: Filtros -->
+          <div class="servicio-card">
+            <div class="servicio-image">
+              <img src="galeria/5micras.avif" alt="Filtros" />
+            </div>
+            <div class="servicio-content">
+              <h3>Filtros</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="footer-bg-overlay"></div>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-contact">
+            <h3>Contacto</h3>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <p>Carrera 43F 14 - 45, El Poblado</p>
+                <p>Medellín - Colombia</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p>ventas@grupoaqua.com</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <p>Teléfono: (604) 448 8224</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <p>Whatsapp: 316 525 0933</p>
+            </div>
+          </div>
+          <div class="footer-logo-section">
+            <div class="footer-logo">
+              <img src="img/GrupoAqua_Logo.avif" alt="GRUPOAQUA Logo" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            Copyright © 2024 Grupoaqua S.A.S | Todos los derechos reservados
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Get elements
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+      const closeBtn = document.querySelector(".close-lightbox");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      // Get all gallery images
+      const galleryImages = document.querySelectorAll(
+        ".galeria-grid .grid-item img",
+      );
+
+      let currentIndex = 0;
+
+      // Function to open lightbox
+      function openLightbox(index) {
+        if (!lightbox || !lightboxImg || !lightboxCaption) return;
+
+        currentIndex = index;
+        const img = galleryImages[currentIndex];
+
+        if (img instanceof HTMLImageElement) {
+          lightbox.classList.add("active");
+          if (lightboxImg instanceof HTMLImageElement) {
+            lightboxImg.src = img.src;
+          }
+          lightboxCaption.textContent = img.alt;
+        }
+      }
+
+      // Function to close lightbox
+      function closeLightbox() {
+        if (lightbox) {
+          lightbox.classList.remove("active");
+        }
+      }
+
+      // Show next image
+      function showNext() {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        openLightbox(currentIndex);
+      }
+
+      // Show previous image
+      function showPrev() {
+        currentIndex =
+          (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        openLightbox(currentIndex);
+      }
+
+      // Event Listeners
+      galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          openLightbox(index);
+        });
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", closeLightbox);
+      }
+
+      // Close on clicking outside the image
+      if (lightbox) {
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", (e) => {
+          e.stopPropagation(); // Prevent closing when clicking button
+          showNext();
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", (e) => {
+          e.stopPropagation(); // Prevent closing when clicking button
+          showPrev();
+        });
+      }
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (lightbox && !lightbox.classList.contains("active")) return;
+
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") showNext();
+        if (e.key === "ArrowLeft") showPrev();
+      });
+    </script>
+  </body>
+</html>
